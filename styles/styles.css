@@ -1,0 +1,282 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700");
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,700;1,700&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: 400;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-family: 'Roboto Mono', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.wrapper {
+  display: grid;
+}
+
+.main-nav {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 1rem 2rem;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+}
+
+.main-nav__brand {
+  margin-right: auto;
+}
+
+.main-nav__brand img {
+  height: 5.25rem;
+}
+
+.main-nav__items {
+  list-style: none;
+  display: flex;
+}
+
+.main-nav .social-icon {
+  width: 2rem;
+  height: 2rem;
+  color: black;
+  cursor: pointer;
+}
+
+.main-nav .social-icon:active {
+  color: #05d69b;
+}
+
+.desktop-nav {
+  display: none;
+}
+
+.mobile-nav .main-nav__brand {
+  visibility: hidden;
+}
+
+.main-header {
+  /* height: 23rem; */
+  height: 80vh;
+  position: relative;
+  z-index: 999;
+}
+
+.main-header--text {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: absolute;
+  font-family: cursive;
+  left: 30%;
+  right: 30%;
+  bottom: 15%;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.main-header--text span:nth-child(1) {
+  color: #B5508C;
+}
+
+.main-header--text span:nth-child(2) {
+  color: #27186D;
+}
+
+.main-header--text span:nth-child(3) {
+  color: #86C127;
+}
+
+.main-header__image {
+  width: 100%;
+  height: 25rem;
+}
+
+.main-header__illustration {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 25rem;
+  padding: 3rem;
+  z-index: 2;
+}
+
+.main-section {
+  padding: 1rem;
+  /* background: #f3f56e; */
+  background: #457b9d;
+  color: whitesmoke;
+}
+
+.main-section__title {
+  text-align: center;
+  font-size: 2.8rem !important;
+  margin-bottom: 0 !important;
+}
+
+.main-section__services {
+  padding-left: 3rem;
+}
+
+.main-section__services li {
+  list-style-type: "→";
+}
+
+.main-section__text {
+  /* color: rgb(58, 57, 57); */
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem !important;
+}
+
+.main-section__text:nth-child(1) {
+  animation-delay: 100ms;
+}
+.main-section__text:nth-child(2) {
+  animation-delay: 300ms;
+}
+.main-section__text:nth-child(3) {
+  animation-delay: 450ms;
+}
+
+.main-section__items {
+  margin-top: 1.5rem;
+  animation-delay: 550ms;
+  /* text-align: center; */
+}
+
+.main-section__items li {
+  display: block !important;
+  font-size: 0.85rem;
+  margin-bottom: 0.6rem;
+  padding-left: 1rem;
+}
+
+.partners {
+  margin-top: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.partners-image {
+  width: 159px;
+  height: 71px;
+}
+
+.partners-image img {
+  width: 100%;
+  height: 100%;
+}
+
+
+@media (min-width: 40rem) {
+  .main-nav {
+    grid-area: nav;
+  }
+
+  .main-header {
+    grid-area: header;
+  }
+
+  .main-section {
+    grid-area: section;
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+  }
+
+  .wrapper {
+    height: 100vh;
+    grid-template-columns: 1fr 1.25fr;
+    grid-template-areas: "header section";
+  }
+
+  .mobile-nav {
+    display: none;
+  }
+
+  .desktop-nav {
+    display: flex;
+    position: absolute;
+    width: 100%;
+  }
+
+  .desktop-nav .social-icon {
+    color: whitesmoke;
+    margin-left: 0.8rem;
+    transition: all 0.1s ease;
+  }
+
+  .desktop-nav .social-icon:hover {
+    font-size: 1.5rem;
+    color: #f3f56e;
+  }
+
+  .main-header {
+    position: relative;
+    background: white;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .main-header__image {
+    display: none;
+  }
+
+  .main-header__illustration {
+    width: 25rem;
+    height: 25rem;
+    padding: 3rem;
+  }
+
+  .main-section__title {
+    text-align: left;
+    font-size: 5rem !important;
+  }
+
+  .main-section__text {
+    font-size: 2rem;
+  }
+
+  .main-section__items li {
+    font-size: 1.5rem;
+  }
+
+  .partners-image {
+    width: 252px;
+    height: 95px;
+  }
+}
